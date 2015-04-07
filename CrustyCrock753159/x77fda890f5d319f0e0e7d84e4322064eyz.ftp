@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="windows-1252"?>
+	<SITES VERSION="1.2">
+	<SITE NAME="psychiatria.waw.pl">
+	<PROTOCOL>FTP</PROTOCOL>
+    <ADDRESS>psychiatria.waw.pl</ADDRESS>
+    <PORT>21</PORT>
+    <USERNAME>aa21007</USERNAME>
+    <PASSWORD>haslodlaadppoland</PASSWORD>
+    <PASSIVE>DEFAULT</PASSIVE>
+    <SSL>NONE</SSL>
+	</SITE>
+	</SITES>

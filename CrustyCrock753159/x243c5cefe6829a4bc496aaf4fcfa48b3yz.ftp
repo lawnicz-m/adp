@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="windows-1252"?>
+	<SITES VERSION="1.2">
+	<SITE NAME="klautel.pl">
+	<PROTOCOL>FTP</PROTOCOL>
+    <ADDRESS>klautel.pl</ADDRESS>
+    <PORT>21</PORT>
+    <USERNAME>klautel</USERNAME>
+    <PASSWORD>6LdefASj</PASSWORD>
+    <PASSIVE>DEFAULT</PASSIVE>
+    <SSL>NONE</SSL>
+	</SITE>
+	</SITES>

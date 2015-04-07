@@ -1,0 +1,9 @@
+total 40
+-rw-r--r-- 1 nobody nogroup  941 Sep 10 15:29 Autoloader.php
+-rw-r--r-- 1 nobody nogroup 1690 Sep 10 15:29 Controller.php
+-rw-r--r-- 1 nobody nogroup  910 Sep 10 15:29 ErrorController.php
+-rw-r--r-- 1 nobody nogroup 5129 Sep 10 15:29 FrontController.php
+-rw-r--r-- 1 nobody nogroup 3625 Sep 10 15:29 Model.php
+-rw-r--r-- 1 nobody nogroup 5155 Sep 10 15:29 Scaffold.php
+-rw-r--r-- 1 nobody nogroup 2777 Sep 10 15:29 URLParser.php
+-rw-r--r-- 1 nobody nogroup 1268 Sep 10 15:29 View.php

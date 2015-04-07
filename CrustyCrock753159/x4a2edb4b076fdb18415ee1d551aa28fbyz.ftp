@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="windows-1252"?>
+	<SITES VERSION="1.2">
+	<SITE NAME="woladent.pl">
+	<PROTOCOL>FTP</PROTOCOL>
+    <ADDRESS>woladent.webiq.pl</ADDRESS>
+    <PORT>21</PORT>
+    <USERNAME>dzieci14</USERNAME>
+    <PASSWORD>XDC&)TQWS9Z+</PASSWORD>
+    <PASSIVE>DEFAULT</PASSIVE>
+    <SSL>NONE</SSL>
+	</SITE>
+	</SITES>

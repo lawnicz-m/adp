@@ -1,0 +1,167 @@
+/* GENERAL */
+body{
+    background: #FFF;
+    margin: 0;
+    overflow: visible;
+
+}
+div, td, p{
+    color: #000;
+    font-family: "Lucida Grande", "Trebuchet MS", Verdana, Tahoma, Arial;
+    font-size: 13px;
+    line-height: normal;
+    text-align: left;
+}
+hr{
+    border: 0;
+    border-top: 1px solid #EDEDED;
+    clear: both;
+    margin: 10px 0 10px 0;
+    padding: 0;
+}
+table{
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+
+/* LINKS */
+a{
+    color: #000;
+    outline: none;
+}
+a:hover{
+    color: #FF9900;
+}
+
+
+/* CONSTRUCTION */
+#page{
+    width: 100%;
+}
+#side, #content{
+    padding: 15px;
+    vertical-align: top;
+}
+#side{
+    width: 350px;
+}
+
+
+/* HEADER */
+#header{
+    background: #FFF;
+    padding: 15px;
+}
+
+
+/* HEADERS */
+h1, h2, h3, h4, h5, h6{
+    border: 0;
+    margin: 0 0 20px 0;
+    padding: 0;
+}
+h1{
+    font-weight: normal;
+    padding: 0 0 0 5px;
+}
+
+
+/* IMAGES */
+img{
+    border: 0;
+    margin: 0;
+    padding: 0;
+}
+
+
+/* ALIGNS */
+.center{ text-align: center; }
+.left{ text-align: left; }
+.right{ text-align: right; }
+
+
+/* FLOATS */
+.floatLeft{ float: left; }
+.floatRight{ float: right; }
+.clear{ clear: both; }
+
+
+/* DECORATIONS */
+.hidden{ display: none; }
+
+
+/* PROPORTIES */
+.width_auto{ width: auto; }
+.widthOne{ width: 1%; }
+.width_5{ width: 5%; }
+.width_25{ width: 25%; }
+.width_20{ width: 20%; }
+.width_40{ width: 40%; }
+.width_15{ width: 15%; }
+.widthQuarter{ width: 25%; }
+.widthThird{ width: 33%; }
+.widthHalf{ width: 50%; }
+.widthFull{ width: 100%; }
+.nobr, .nowrap{ white-space: nowrap; }
+.red{ color: #FF3300; }
+
+
+/* LINKI */
+a.noLine{ text-decoration: none; }
+
+
+/* TABELE */
+td{ vertical-align: middle; }
+
+
+/* TABELA FRAZ */
+#frazy{
+    border-collapse: collapse;
+    border-spacing: 0;
+    background: #CCC;
+    width: 100%;
+}
+#frazy td, #frazy th{
+    padding: 5px;
+    text-align: center;
+    width: 1%;
+}
+#frazy th{
+    background: #444;
+    color: #FFF;
+    cursor: hand;
+    cursor: pointer;
+    padding: 3px 5px 5px 5px;
+    text-align: left;
+    text-decoration: underline;
+}
+#frazy td{
+    background: #FFF;
+}
+#frazy tr.odd td{
+    background: #EDEDED;
+}
+#frazy td.fraza{
+    text-align: left;
+    width: 97%;
+}
+
+
+/* TABELA SŁUPKOWA */
+.tabela_slupkowa{
+    border-collapse: collapse;
+    border-spacing: 0;
+    margin: 10px 0 0 0;
+    width: 100%;
+}
+.tabela_slupkowa td{
+    vertical-align: bottom;
+    text-align: center;
+    width: 1%;
+}
+.tabela_slupkowa td div{
+    background-color: orange;
+    margin: auto;
+    width: 10px;
+}

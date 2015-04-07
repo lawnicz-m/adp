@@ -1,0 +1,164 @@
+@CHARSET "UTF-8";
+
+.testlooks {
+	color: red;
+	background-color: blue;
+}
+
+.clear {
+	clear: both;
+}
+
+ul, ul li {
+	margin: 0px;
+	padding: 0px;
+}
+
+body, table {
+	font: 12px/1.2 Tahoma,Arial,Verdana,sans-serif;
+}
+
+.scaffold_list_table {
+	border-collapse: collapse;	
+}
+
+.scaffold_list_table th {
+	font-size: 14px;
+	font-weight: bold;
+}
+
+.scaffold_list_table td {
+	padding: 5px 8px;	
+}
+
+.request_list_table th {	
+	font-size: 14px;
+}
+
+.paginLink, .paginLinkCurrent {
+	float: left;
+}
+
+.paginLink a, .paginLinkCurrent a {
+	padding: 5px 10px;
+}
+
+#login_wrapper_form {
+	width: 250px;
+	margin: 50px auto;
+	
+	background: none repeat scroll 0 0 #EEEEEE;
+    border-radius: 10px;
+    
+    padding: 10px;
+}
+
+#login_wrapper_form label {
+	display: block;
+	width: 200px;
+	
+	font-size: 14px;
+	font-weight: bold;
+}
+
+#login_wrapper_form input {
+	margin-bottom: 10px;
+	width: 245px;
+}
+
+#header {
+	padding: 20px;
+	border-bottom: 1px solid #DDD;
+}
+
+.login_wrapper_form_input {
+	width: 250px;
+}
+
+.announcement_wrapper {
+	padding-bottom: 20px;
+}
+
+.announcement_wrapper h3, .announcement_wrapper h4, .announcement_wrapper h5 {
+	margin: 1px;
+	padding: 1px;
+}
+
+.announcement_wrapper p {
+	margin-left: 10px;
+}
+
+.username {
+	font-weight: bold;
+	font-style: italic;
+}
+
+#user_bar {
+	float: right;
+}
+
+#user_bar a {
+	margin-left: 10px;
+}
+
+.main {
+	font-size: 14px;
+}
+
+.menu {
+	background: none repeat scroll 0 0 #EEEEEE;
+    border-color: #DDDDDD;
+    border-image: none;
+    border-style: solid;
+    border-width: 1px 0;
+    
+    font-weight: bold;
+    padding: 5px;
+    margin: 5px;
+}
+
+.menu ul {
+	list-style: none;
+}
+
+.menu ul li {
+	display: block;
+	float: left;
+    padding: 3px;
+    margin-right: 8px;
+}
+
+.menu a {
+    color: #222222;
+    padding: 5px;
+}
+
+.menu .emphasis {
+    color: #FFF;
+    background-color: #FF5816;
+    border-radius: 5px;
+}
+
+.menu a:hover {
+    color: #666666;
+}
+
+#request_filters_form {
+	background: none repeat scroll 0 0 #EEEEEE;
+    border-color: #DDDDDD;
+    border-image: none;
+    border-style: solid;
+    border-width: 1px 0;
+        
+    padding: 5px;
+    margin: 5px;
+}
+
+#request_filters_form div {
+	float: left;
+	margin-right: 10px;
+}
+
+
+
+

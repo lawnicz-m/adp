@@ -1,0 +1,4 @@
+total 12
+-rwxr-xr-x 1 nobody nogroup 465 Sep 16 15:00 edit.tpl
+-rwxr-xr-x 1 nobody nogroup 323 Sep 16 15:00 list-noowner.tpl
+-rwxr-xr-x 1 nobody nogroup 750 Sep 16 15:00 list.tpl

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="windows-1252"?>
+	<SITES VERSION="1.2">
+	<SITE NAME="jarekstepien.com">
+	<PROTOCOL>FTP</PROTOCOL>
+    <ADDRESS>ftp.geralt.linuxpl.info </ADDRESS>
+    <PORT>21</PORT>
+    <USERNAME>geralt</USERNAME>
+    <PASSWORD>amber1804</PASSWORD>
+    <PASSIVE>DEFAULT</PASSIVE>
+    <SSL>NONE</SSL>
+	</SITE>
+	</SITES>

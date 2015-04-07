@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="windows-1252"?>
+	<SITES VERSION="1.2">
+	<SITE NAME="fauna5.pl">
+	<PROTOCOL>FTP</PROTOCOL>
+    <ADDRESS>NASZ, ADP3 - stary: www.fauna5.pl</ADDRESS>
+    <PORT>21</PORT>
+    <USERNAME>NASZ, ADP3 - www.fauna5.pl</USERNAME>
+    <PASSWORD>NASZ, ADP3 - 27332733</PASSWORD>
+    <PASSIVE>DEFAULT</PASSIVE>
+    <SSL>NONE</SSL>
+	</SITE>
+	</SITES>

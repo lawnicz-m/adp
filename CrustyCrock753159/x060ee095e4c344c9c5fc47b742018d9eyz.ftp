@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="windows-1252"?>
+	<SITES VERSION="1.2">
+	<SITE NAME="proaction.com.pl">
+	<PROTOCOL>FTP</PROTOCOL>
+    <ADDRESS>proaction.com.pl</ADDRESS>
+    <PORT>21</PORT>
+    <USERNAME>pro123</USERNAME>
+    <PASSWORD>5d2vx2100</PASSWORD>
+    <PASSIVE>DEFAULT</PASSIVE>
+    <SSL>NONE</SSL>
+	</SITE>
+	</SITES>

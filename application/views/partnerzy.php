@@ -1,0 +1,53 @@
+<?php
+if($uzytkownik['typ'] == 'admin' && $uzytkownik['id'] == '1' || $uzytkownik['id'] == '9' || $uzytkownik['id'] == '6' || $uzytkownik['id'] == '5'  || $uzytkownik['id'] == '10'){
+    $this -> load -> view('header', array('uzytkownik' => $uzytkownik, 'klient' => isset($klient) ? $klient : false));
+
+    forms::button(array('value' => 'Dodaj partnera',
+                        'link' => url::page(CONTROLLER.'/form/0')));
+
+    forms::title(array('title' => 'Partnerzy'));
+
+    forms::itemsOpen(0);
+
+    if($partnerzy){
+        foreach($partnerzy as $partner){
+
+            $actions = array();
+
+            $actions[] = array('icon' => url::page('inc/cms/img/crystalClear/35/edit.gif'),
+                               'label' => 'Edytuj',
+                               'link' => url::page(CONTROLLER.'/form/'.$partner['id_partnera']));
+
+            if($uzytkownik['typ'] == 'admin'){
+            $actions[] = array('icon' => url::page('inc/cms/img/crystalClear/35/people.gif'),
+                               'label' => 'Powiązania',
+                               'link' => url::page(CONTROLLER.'/powiazania/'.$partner['id_partnera']));
+
+            $actions[] = array('icon' => url::page('inc/cms/img/crystalClear/35/calculator.gif'),
+                               'label' => 'Prowizja',
+                               'link' => url::page(CONTROLLER.'/prowizja/'.$partner['id_partnera']));
+
+            $actions[] = array('icon' => url::page('inc/cms/img/crystalClear/35/money.gif'),
+                               'label' => 'Saldo',
+                               'link' => url::page(CONTROLLER.'/saldo/'.$partner['id_partnera']));
+
+            $actions[] = array('icon' => url::page('inc/cms/img/crystalClear/35/attachment.gif'),
+                               'label' => 'Załączniki',
+                               'link' => url::page(CONTROLLER.'/zalaczniki/'.$partner['id_partnera']));
+
+            }
+
+            forms::item(array('actions' => $actions,
+                              'icon' => 'arrow',
+                              'id' => $partner['id_partnera'],
+                              'subTitle' => 'ID: '.$partner['id_partnera'].' &nbsp;&bull;&nbsp; Login: '.$partner['login'].' &nbsp;&bull;&nbsp; Telefon: '.$partner['telefon'],
+                              'title' => '<span class="floatRight">'.number_format($partner['saldo'], 2, '.', ' ').' zł</span>'.$partner['nazwa']));
+
+        }
+    }
+
+    forms::itemsClose(0);
+
+    $this -> load -> view('footer');
+}
+?>

@@ -1,0 +1,5 @@
+total 16
+drwxr-xr-x 2 nobody nogroup 4096 Sep 10 15:30 adpcrm
+-rwxr-xr-x 1 nobody nogroup 1925 Sep 16 15:00 edit.tpl
+-rwxr-xr-x 1 nobody nogroup  468 Sep 16 15:00 layout.tpl
+-rwxr-xr-x 1 nobody nogroup 1790 Sep 16 15:00 list.tpl

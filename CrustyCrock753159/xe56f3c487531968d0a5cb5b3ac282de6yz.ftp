@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="windows-1252"?>
+	<SITES VERSION="1.2">
+	<SITE NAME="putz.com.pl">
+	<PROTOCOL>FTP</PROTOCOL>
+    <ADDRESS>putz.com.pl</ADDRESS>
+    <PORT>21</PORT>
+    <USERNAME>serwer@putz.com.pl</USERNAME>
+    <PASSWORD>%^%-7NUz8%nZ</PASSWORD>
+    <PASSIVE>DEFAULT</PASSIVE>
+    <SSL>NONE</SSL>
+	</SITE>
+	</SITES>

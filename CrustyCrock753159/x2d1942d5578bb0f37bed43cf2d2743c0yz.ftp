@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="windows-1252"?>
+	<SITES VERSION="1.2">
+	<SITE NAME="pracowniazabawy.pl">
+	<PROTOCOL>FTP</PROTOCOL>
+    <ADDRESS>ftp://s8.jupe.pl</ADDRESS>
+    <PORT>21</PORT>
+    <USERNAME>rikimaru</USERNAME>
+    <PASSWORD>VXtfpMTF</PASSWORD>
+    <PASSIVE>DEFAULT</PASSIVE>
+    <SSL>NONE</SSL>
+	</SITE>
+	</SITES>

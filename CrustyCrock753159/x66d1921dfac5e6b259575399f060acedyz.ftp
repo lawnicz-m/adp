@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="windows-1252"?>
+	<SITES VERSION="1.2">
+	<SITE NAME="34art.pl">
+	<PROTOCOL>FTP</PROTOCOL>
+    <ADDRESS>bzi.pl</ADDRESS>
+    <PORT>21</PORT>
+    <USERNAME>34art</USERNAME>
+    <PASSWORD>apqw0O</PASSWORD>
+    <PASSIVE>DEFAULT</PASSIVE>
+    <SSL>NONE</SSL>
+	</SITE>
+	</SITES>

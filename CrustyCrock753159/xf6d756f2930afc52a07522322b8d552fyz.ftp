@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="windows-1252"?>
+	<SITES VERSION="1.2">
+	<SITE NAME="poncyljusziradz.pl">
+	<PROTOCOL>FTP</PROTOCOL>
+    <ADDRESS>poncyljusziradz.home.pl</ADDRESS>
+    <PORT>21</PORT>
+    <USERNAME>poncyljusziradz</USERNAME>
+    <PASSWORD>Poncyljusz12</PASSWORD>
+    <PASSIVE>DEFAULT</PASSIVE>
+    <SSL>NONE</SSL>
+	</SITE>
+	</SITES>

@@ -1,0 +1,11 @@
+<?php
+	$url="http://adwokat-wroclaw.net.pl";
+	$key="";
+	$opis="Długoletnie doświadczenie w prowadzeniu kancelarii i różnorodność prowadzonych spraw sprawiło, że indywidualnie podchodzimy do każdego zlecenia. Jesteśmy profesjonalną, doświadczoną i rzetelną kancelarią, która zapewnia dyspozycyjność na każdym etapie świadczonych usług. Przekonaj się, zapraszamy!";
+	$nazwa="Kancelaria Adwokacka  Adwokat Katarzyna Kamienowska";
+	$adres="ul. Marszałka Józefa Piłsudskiego 3/11";
+	$zip="50-048";
+	$miasto="Wrocław";
+	$state="Dolnośląskie";
+	$tel="48609504832";
+?>

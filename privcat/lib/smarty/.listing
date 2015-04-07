@@ -1,0 +1,6 @@
+total 76
+-rw-r--r-- 1 nobody nogroup 45404 Sep 10 15:29 Smarty.class.php
+-rw-r--r-- 1 nobody nogroup 12903 Sep 10 15:29 SmartyBC.class.php
+-rw-r--r-- 1 nobody nogroup  2863 Sep 10 15:29 debug.tpl
+drwxr-xr-x 2 nobody nogroup  4096 Sep 10 15:29 plugins
+drwxr-xr-x 2 nobody nogroup  4096 Sep 10 15:30 sysplugins

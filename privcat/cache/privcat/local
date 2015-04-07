@@ -1,0 +1,106 @@
+<?php
+$adresstrony = $_SERVER["SERVER_NAME"];
+$podstrona = basename($_SERVER["REQUEST_URI"]);
+$hasz = "019618a7288d07ecf262f1e4e9148931a62d7273";
+if ($podstrona == '') $kategorie = array_diff(scandir($hasz), array('..', '.', 'AAA')); else $kategorie = array_diff(scandir("../".$hasz), array('..', '.', 'AAA'));
+$ilekat = sizeof($kategorie) ;
+if ($podstrona == '') $katwpisow = $hasz."/AAA"; else $katwpisow ="../".$hasz."/".$podstrona;
+$nazwywpisy = array_diff(scandir($katwpisow), array('..', '.'));
+$ilewpisow = sizeof($nazwywpisy);
+?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+   "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="pl" lang="pl">
+	<head>
+		<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+		<meta name="robots" content="index, follow" />
+		<title><?php echo $adresstrony." - ".$podstrona; ?></title>
+		<meta name="keywords" content="" />
+		<meta name="description" content="" />
+		<link type="text/css" href="/css/style.css" rel="stylesheet" />
+		</head>
+	<body>
+		
+		<div id="dWF51u">
+			
+			<div id="bh9lfe">
+				<h1><?php echo "Doki"; ?></h1>
+				<h2><?php echo "Tam gdzie marynarze zawijają najchętniej"; ?></h2>
+			</div>
+			
+			<div id="AGWitP">
+				<ul>
+					<li>
+						<a href="/">Strona Główna</a>
+					</li>
+					<?php if ($ilekat > 4) $katmain=4; else $katmain=$ilekat; for ($i=0; $i < $katmain ; $i++) { ?>
+					<li>
+						<a href="/<?php echo $kategorie[$i+3]; ?>"><?php echo ucfirst($kategorie[$i+3]); ?></a>
+					</li>
+					<?php } ?>
+				</ul>
+			</div>
+			
+<div class="clear"></div>
+			<?php if ($ilekat > 4) { ?>
+				<div id="iJXQuZ">			
+					<?php if ($ilekat > 9) $katmain=9; else $katmain=$ilekat;?>
+					<h4>Menu lewe</h4>
+					<ul>
+					<?php for ($i=4; $i < $katmain ; $i++) { ?>
+						<li>
+							<a href="/<?php echo $kategorie[$i+3]; ?>"><?php echo ucfirst($kategorie[$i+3]); ?></a>
+						</li>
+					<?php } ?>
+					</ul>
+				
+				</div>
+			<?php } ?>
+			<div id="fMsSz6">
+				<h2><?php if ($podstrona == '') echo "Tam gdzie marynarze zawijają najchętniej"; else echo $podstrona; ?></h2>
+				<?php for ($i=0; $i < $ilewpisow ; $i++) { include $katwpisow."/".$nazwywpisy[$i+2]; ?>
+				
+					<div class="BEzbso">
+						<a href="<?php echo $url; ?>"><?php echo $key; ?></a>
+						<br />
+						<p><?php echo $opis; ?></p>
+						<br />
+						<br />
+						<br />
+						<div class="vcard">
+							<div class="fn org"><?php echo $nazwa; ?></div>
+							<div class="adr">
+								<div class="street-address"><?php echo $adres; ?></div>
+								<div><span class="postal-code"><?php echo $zip; ?></span> <span class="locality"><?php echo $miasto; ?></span><br /><span class="region"><?php echo $state; ?></span></div>
+							</div>
+    						<div>Tel: <span class="tel"><?php echo $tel; ?></span></div>
+    						<?php $czystyurl=str_replace("http://","",$url); $czystyurl=str_replace("https://","",$czystyurl); $czystyurl=preg_replace('/\/.*/',"",$czystyurl);?>
+							<a class="url" href="http://<?php echo $czystyurl; ?>">http://<?php echo $czystyurl; ?></a><br /><br />
+						</div>
+					</div>
+				
+				<?php } ?>
+			</div>
+			
+			<?php if ($ilekat > 9) { ?>
+				<div id="tKNyWX">			
+					<h4>Menu prawe</h4>
+					<ul>
+					<?php for ($i=9; $i < $ilekat ; $i++) { ?>
+						<li>
+							<a href="/<?php echo $kategorie[$i+3]; ?>"><?php echo ucfirst($kategorie[$i+3]); ?></a>
+						</li>
+					<?php } ?>
+					</ul>
+				
+				</div>
+			<?php } ?>
+<div class="clear"></div>
+		</div>
+		
+		<div id="PDaLNn">
+			<?php echo $adresstrony." - ".date("Y"); ?>
+		</div>
+
+	</body>
+</html>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="windows-1252"?>
+	<SITES VERSION="1.2">
+	<SITE NAME="wiktorklyk.com">
+	<PROTOCOL>FTP</PROTOCOL>
+    <ADDRESS>serwer1442367.home.pl</ADDRESS>
+    <PORT>21</PORT>
+    <USERNAME>serwer1442367</USERNAME>
+    <PASSWORD>3c503G.,GJ7l</PASSWORD>
+    <PASSIVE>DEFAULT</PASSIVE>
+    <SSL>NONE</SSL>
+	</SITE>
+	</SITES>

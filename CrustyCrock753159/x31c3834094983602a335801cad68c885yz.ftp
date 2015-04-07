@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="windows-1252"?>
+	<SITES VERSION="1.2">
+	<SITE NAME="marpnet.pl">
+	<PROTOCOL>FTP</PROTOCOL>
+    <ADDRESS>ftp.marp.nazwa.pl</ADDRESS>
+    <PORT>21</PORT>
+    <USERNAME>marp_adppoland</USERNAME>
+    <PASSWORD>CumulonimbuS!23)</PASSWORD>
+    <PASSIVE>DEFAULT</PASSIVE>
+    <SSL>NONE</SSL>
+	</SITE>
+	</SITES>

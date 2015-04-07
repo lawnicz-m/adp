@@ -1,0 +1,10 @@
+total 36
+drwxr-xr-x 2 nobody nogroup 4096 Sep 10 15:29 admin
+drwxr-xr-x 2 nobody nogroup 4096 Sep 16 15:00 clients
+drwxr-xr-x 2 nobody nogroup 4096 Sep 10 15:29 entries
+drwxr-xr-x 2 nobody nogroup 4096 Sep 10 15:29 error
+-rwxr-xr-x 1 nobody nogroup  886 Sep 16 15:00 layout.tpl
+-rwxr-xr-x 1 nobody nogroup  307 Sep 16 15:00 menu.tpl
+drwxr-xr-x 2 nobody nogroup 4096 Sep 10 15:29 privcat
+drwxr-xr-x 3 nobody nogroup 4096 Sep 10 15:29 scaffold
+drwxr-xr-x 2 nobody nogroup 4096 Sep 10 15:29 text

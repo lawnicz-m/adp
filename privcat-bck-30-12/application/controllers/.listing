@@ -1,0 +1,4 @@
+total 12
+-rwxr-xr-x 1 nobody nogroup  524 Sep 16 15:00 IndexController.php
+drwxr-xr-x 2 nobody nogroup 4096 Sep 10 15:29 admin
+drwxr-xr-x 2 nobody nogroup 4096 Sep 16 15:00 privcat

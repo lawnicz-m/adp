@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="windows-1252"?>
+	<SITES VERSION="1.2">
+	<SITE NAME="akademia-jachtingu.pl">
+	<PROTOCOL>FTP</PROTOCOL>
+    <ADDRESS>ftp.akademia-jachtingu.pl</ADDRESS>
+    <PORT>21</PORT>
+    <USERNAME>adp@akademia-jachtingu.pl</USERNAME>
+    <PASSWORD>CCKp1aTB</PASSWORD>
+    <PASSIVE>DEFAULT</PASSIVE>
+    <SSL>NONE</SSL>
+	</SITE>
+	</SITES>

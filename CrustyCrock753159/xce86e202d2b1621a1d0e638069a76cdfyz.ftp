@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="windows-1252"?>
+	<SITES VERSION="1.2">
+	<SITE NAME="cegla-jedrek.pl/">
+	<PROTOCOL>FTP</PROTOCOL>
+    <ADDRESS>cegla-jedrek.pl</ADDRESS>
+    <PORT>21</PORT>
+    <USERNAME>cegla-jedrek.pl</USERNAME>
+    <PASSWORD>jedrek.qbd13</PASSWORD>
+    <PASSIVE>DEFAULT</PASSIVE>
+    <SSL>NONE</SSL>
+	</SITE>
+	</SITES>

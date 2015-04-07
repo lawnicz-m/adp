@@ -1,0 +1,15 @@
+<?php
+	$itemtype="LocalBusiness";	
+	$url="http://royaldent.pl/wybielanie";
+	$key="licówki wrocław";
+	$opis="Chirurgia stomatologiczna, leczenie kanałowe, stomatologia estetyczna, implantologia, ortodoncja, protetyka, przeglądy uzębienia i wiele innych usług oferuje Royal Dent Bartkowiak i Urban s. c. z Wrocławia. Gabinet przyjmuje także najmłodszych pacjentów, dla których pierwsza i kolejne wizyty nie kojarzą się ze stresem.";
+	$nazwa="Royal Dent Bartkowiak i Urban S.C.";
+	$adres="ul. Leszczyńskiego 5/7/9";
+	$zip="50-078";
+	$miasto="Wrocław";
+	$state="Dolnośląskie";
+	$tel="713441129";
+	$nofol="0";
+	$linki="1";
+	
+?>

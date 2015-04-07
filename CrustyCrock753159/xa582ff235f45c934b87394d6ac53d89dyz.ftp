@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="windows-1252"?>
+	<SITES VERSION="1.2">
+	<SITE NAME="procan.pl">
+	<PROTOCOL>FTP</PROTOCOL>
+    <ADDRESS>procan.pl</ADDRESS>
+    <PORT>21</PORT>
+    <USERNAME>ftpadmin@procan.lst.pl</USERNAME>
+    <PASSWORD>KGy^;9O{yqC@</PASSWORD>
+    <PASSIVE>DEFAULT</PASSIVE>
+    <SSL>NONE</SSL>
+	</SITE>
+	</SITES>

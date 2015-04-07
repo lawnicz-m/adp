@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="windows-1252"?>
+	<SITES VERSION="1.2">
+	<SITE NAME="jubi-tom.pl">
+	<PROTOCOL>FTP</PROTOCOL>
+    <ADDRESS>ftp.wirt12.biznes-host.pl</ADDRESS>
+    <PORT>21</PORT>
+    <USERNAME>admin@iqftvff.wirt12.bhlink.pl</USERNAME>
+    <PASSWORD>j6JkqH93</PASSWORD>
+    <PASSIVE>DEFAULT</PASSIVE>
+    <SSL>NONE</SSL>
+	</SITE>
+	</SITES>

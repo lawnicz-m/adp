@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="windows-1252"?>
+	<SITES VERSION="1.2">
+	<SITE NAME="hurt.insel.pl">
+	<PROTOCOL>FTP</PROTOCOL>
+    <ADDRESS>ftp.insel.nazwa.pl</ADDRESS>
+    <PORT>21</PORT>
+    <USERNAME>insel_hurt</USERNAME>
+    <PASSWORD>adpADP99</PASSWORD>
+    <PASSIVE>DEFAULT</PASSIVE>
+    <SSL>NONE</SSL>
+	</SITE>
+	</SITES>

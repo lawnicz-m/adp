@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="windows-1252"?>
+	<SITES VERSION="1.2">
+	<SITE NAME="selfwroclaw.pl">
+	<PROTOCOL>FTP</PROTOCOL>
+    <ADDRESS>norki868.linuxpl.info</ADDRESS>
+    <PORT>21</PORT>
+    <USERNAME>norki868</USERNAME>
+    <PASSWORD>mprpw6420</PASSWORD>
+    <PASSIVE>DEFAULT</PASSIVE>
+    <SSL>NONE</SSL>
+	</SITE>
+	</SITES>

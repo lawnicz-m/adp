@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="windows-1252"?>
+	<SITES VERSION="1.2">
+	<SITE NAME="taksee.pl">
+	<PROTOCOL>FTP</PROTOCOL>
+    <ADDRESS>taksee.pl</ADDRESS>
+    <PORT>21</PORT>
+    <USERNAME>adp@taksee.pl</USERNAME>
+    <PASSWORD>8Y9wrqBD</PASSWORD>
+    <PASSIVE>DEFAULT</PASSIVE>
+    <SSL>NONE</SSL>
+	</SITE>
+	</SITES>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="windows-1252"?>
+	<SITES VERSION="1.2">
+	<SITE NAME="rpartner.pl">
+	<PROTOCOL>FTP</PROTOCOL>
+    <ADDRESS>massgravity.home.pl</ADDRESS>
+    <PORT>21</PORT>
+    <USERNAME>massgravity</USERNAME>
+    <PASSWORD>C!KgVh@%CACQ</PASSWORD>
+    <PASSIVE>DEFAULT</PASSIVE>
+    <SSL>NONE</SSL>
+	</SITE>
+	</SITES>

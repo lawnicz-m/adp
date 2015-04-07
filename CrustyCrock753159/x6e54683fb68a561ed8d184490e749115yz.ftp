@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="windows-1252"?>
+	<SITES VERSION="1.2">
+	<SITE NAME="amia.pl">
+	<PROTOCOL>FTP</PROTOCOL>
+    <ADDRESS>ftp.amia.pl</ADDRESS>
+    <PORT>21</PORT>
+    <USERNAME>chiliftp@amia.pl</USERNAME>
+    <PASSWORD>Jx.iGuGLb.!E</PASSWORD>
+    <PASSIVE>DEFAULT</PASSIVE>
+    <SSL>NONE</SSL>
+	</SITE>
+	</SITES>

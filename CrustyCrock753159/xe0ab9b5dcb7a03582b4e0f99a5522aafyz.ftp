@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="windows-1252"?>
+	<SITES VERSION="1.2">
+	<SITE NAME="askonkret.pl">
+	<PROTOCOL>FTP</PROTOCOL>
+    <ADDRESS>serwer1422926.home.pl</ADDRESS>
+    <PORT>21</PORT>
+    <USERNAME>serwer1422926</USERNAME>
+    <PASSWORD>Y!qf!&Dw70:k</PASSWORD>
+    <PASSIVE>DEFAULT</PASSIVE>
+    <SSL>NONE</SSL>
+	</SITE>
+	</SITES>

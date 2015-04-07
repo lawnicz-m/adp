@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="windows-1252"?>
+	<SITES VERSION="1.2">
+	<SITE NAME="kibalo.pl">
+	<PROTOCOL>FTP</PROTOCOL>
+    <ADDRESS>ftp.kibalo.pl</ADDRESS>
+    <PORT>21</PORT>
+    <USERNAME>kibalo483</USERNAME>
+    <PASSWORD>9jXy51Ko3l</PASSWORD>
+    <PASSIVE>DEFAULT</PASSIVE>
+    <SSL>NONE</SSL>
+	</SITE>
+	</SITES>

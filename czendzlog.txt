@@ -1,0 +1,57 @@
+﻿04.12.2014y | zmiana nozbe do handlowca na pd i technicznego na pc
+|zmiana:
+|/application/controllers/notatki-klienta.php
+
+08.01.2012y | zmiana widoku ekranu powitalnego, profilu Klienta, changeloga
+|zmiana:
+|/application/views/witaj.php
+|/application/views/klienci_profil.php
+	
+07.01.2012v | zamiana widoku pozycjonera -> dodanie praw do rozszerzonego widoku "witaj", dostęp do GL i dodanie możliwości sortowania przez partnera
+|zmiana:
+|/application/views/header.php
+|/application/views/klienci.php
+|/application/views/witaj.php
+
+07.01.2012v | prowadzący "informatyk" przeniesiony do profilu klienta
+|zmiana:
+|/application/controllers/klienci.php
+|/application/controllers/seo.php
+|/application/models/klienci.php
+|/application/models/seo.php
+|/application/views/klienci_formularz.php
+|/application/views/klienci_profil.php
+|/application/views/seo_form.php
+|/application/views/seo_status.php
+
+04.01.2013v | update seo (usunięty checkbox -> "informatyk" i przeniesione do klienci_profil)
+|zmiana:
+|/application/controllers/seo.php
+|/application/models/seo.php
+|/application/views/seo_form.php
+|/application/views/seo_status.php
+|/application/views/klienci_profil.php
+
+04.01.2013v | update seo (dodany checkbox -> "do poprawy")
+|zmiana:
+|/application/controllers/seo.php
+|/application/models/seo.php
+|/application/views/seo_form.php
+|/application/views/seo_status.php
+
+04.01.2012v | dodanie zakładki seo
+|dodane:	
+|/application/controllers/seo.php
+|/application/models/seo.php
+|/application/views/seo_form.php
+|/application/views/seo_status.php
+|/inc/cms/img/seo.gif
+|zmiana: 
+|/application/views/header.php
+
+04.01.2012v | dodanie szyfrowania haseł
+|zmiana:
+|/aplication/models/admin.php
+|/aplication/models/partnerzy.php
+|/aplication/models/pozycjonerzy.php
+|/aplication/controllers/autoryzacja.php

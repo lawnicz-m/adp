@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="windows-1252"?>
+	<SITES VERSION="1.2">
+	<SITE NAME="dlugopis.com.pl">
+	<PROTOCOL>FTP</PROTOCOL>
+    <ADDRESS>uy842163459e.nazwa.pl</ADDRESS>
+    <PORT>21</PORT>
+    <USERNAME>uy842163459e</USERNAME>
+    <PASSWORD>dFg45kOPP@9f</PASSWORD>
+    <PASSIVE>DEFAULT</PASSIVE>
+    <SSL>NONE</SSL>
+	</SITE>
+	</SITES>

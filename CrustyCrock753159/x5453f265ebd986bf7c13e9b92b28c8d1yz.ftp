@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="windows-1252"?>
+	<SITES VERSION="1.2">
+	<SITE NAME="detox-wroclaw.pl">
+	<PROTOCOL>FTP</PROTOCOL>
+    <ADDRESS>s13.hekko.pl</ADDRESS>
+    <PORT>21</PORT>
+    <USERNAME>c2h5oh</USERNAME>
+    <PASSWORD>PpO32pNf</PASSWORD>
+    <PASSIVE>DEFAULT</PASSIVE>
+    <SSL>NONE</SSL>
+	</SITE>
+	</SITES>

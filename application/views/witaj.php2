@@ -1,0 +1,892 @@
+<?php
+    if(!ACTION) $this -> load -> view('header', array('uzytkownik' => $uzytkownik, 'klient' => isset($klient) ? $klient : false));
+
+    if(($uzytkownik['typ'] == 'admin')){
+?>
+
+<?php if(!ACTION){ ?>
+<style type="text/css">
+	.column{
+	    width: 50%;
+	    float: left;
+	    padding-bottom: 100px;
+    }
+	.portlet{
+	    -moz-box-shadow: 3px 3px 5px #CCC;
+	    -webkit-box-shadow: 3px 3px 5px #CCC;
+	    border: 1px solid #CCC;
+	    margin: 0 20px 20px 0;
+    }
+	.portlet-header{
+	    background: url("<?php echo url::base();?>inc/cms/img/buttonBackground.png") repeat-x scroll center center #000000;
+	    border: 0;
+	    color: #FFF;
+	    font-weight: normal;
+        margin: 1px;
+        padding: 4px 7px 6px 7px;
+    }
+	.portlet-header .ui-icon {
+	    float: right;
+    }
+	.portlet-content{
+	    min-height: 100px;
+	    padding: 5px;
+    }
+	.ui-sortable-placeholder { border: 1px dotted black; visibility: visible !important; height: 50px !important; }
+	.ui-sortable-placeholder * { visibility: hidden; }
+	
+	.gradient_poz_BK_RED {
+				background: #000000;
+				background: -moz-linear-gradient(left, #000000 0%, #ff0000 100%);
+				background: -webkit-gradient(linear, left top, right top, color-stop(0%,#000000), color-stop(100%,#ff0000));
+				background: -webkit-linear-gradient(left, #000000 0%,#ff0000 100%);
+				background: -o-linear-gradient(left, #000000 0%,#ff0000 100%);
+				background: -ms-linear-gradient(left, #000000 0%,#ff0000 100%);
+				background: linear-gradient(to right, #000000 0%,#ff0000 100%);
+				filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#000000', endColorstr='#ff0000',GradientType=1 );
+	}
+	.gradient_poz_BK_GRN {
+				background: #000000; /* Old browsers */
+				background: -moz-linear-gradient(left,  #000000 0%, #54ff00 100%); /* FF3.6+ */
+				background: -webkit-gradient(linear, left top, right top, color-stop(0%,#000000), color-stop(100%,#54ff00)); /* Chrome,Safari4+ */
+				background: -webkit-linear-gradient(left,  #000000 0%,#54ff00 100%); /* Chrome10+,Safari5.1+ */
+				background: -o-linear-gradient(left,  #000000 0%,#54ff00 100%); /* Opera 11.10+ */
+				background: -ms-linear-gradient(left,  #000000 0%,#54ff00 100%); /* IE10+ */
+				background: linear-gradient(to right,  #000000 0%,#54ff00 100%); /* W3C */
+				filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#000000', endColorstr='#54ff00',GradientType=1 ); /* IE6-9 */
+	}
+	.gradient_rad_BK_RED {
+				background: #000000;
+				background: -moz-radial-gradient(center, ellipse cover,  #000000 0%, #ff0000 100%);
+				background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%,#000000), color-stop(100%,#ff0000));
+				background: -webkit-radial-gradient(center, ellipse cover,  #000000 0%,#ff0000 100%);
+				background: -o-radial-gradient(center, ellipse cover,  #000000 0%,#ff0000 100%);
+				background: -ms-radial-gradient(center, ellipse cover,  #000000 0%,#ff0000 100%);
+				background: radial-gradient(ellipse at center,  #000000 0%,#ff0000 100%);
+				filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#000000', endColorstr='#ff0000',GradientType=1 );
+	}
+	.gradient_rad_BK_GRN {
+				background: #000000;
+				background: -moz-radial-gradient(center, ellipse cover,  #000000 0%, #54ff00 100%);
+				background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%,#000000), color-stop(100%,#54ff00));
+				background: -webkit-radial-gradient(center, ellipse cover,  #000000 0%,#54ff00 100%);
+				background: -o-radial-gradient(center, ellipse cover,  #000000 0%,#54ff00 100%);
+				background: -ms-radial-gradient(center, ellipse cover,  #000000 0%,#54ff00 100%);
+				background: radial-gradient(ellipse at center,  #000000 0%,#54ff00 100%);
+				filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#000000', endColorstr='#54ff00',GradientType=1 );
+	}
+	.gradient_dbl_RED_BK_RED {
+				background: #ff0000;
+				background: -moz-linear-gradient(left,  #ff0000 0%, #000000 50%, #ff0000 100%);
+				background: -webkit-gradient(linear, left top, right top, color-stop(0%,#ff0000), color-stop(50%,#000000), color-stop(100%,#ff0000));
+				background: -webkit-linear-gradient(left,  #ff0000 0%,#000000 50%,#ff0000 100%);
+				background: -o-linear-gradient(left,  #ff0000 0%,#000000 50%,#ff0000 100%);
+				background: -ms-linear-gradient(left,  #ff0000 0%,#000000 50%,#ff0000 100%);
+				background: linear-gradient(to right,  #ff0000 0%,#000000 50%,#ff0000 100%);
+				filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ff0000', endColorstr='#ff0000',GradientType=1 );
+	}
+	
+</style>
+
+<script type="text/javascript">
+    $(function(){
+    	$(".column").sortable({
+    		connectWith: '.column'
+    	});
+
+    	$(".portlet").addClass("ui-widget ui-widget-content ui-helper-clearfix ui-corner-all").find(".portlet-header").addClass("ui-widget-header ui-corner-all").end().find(".portlet-content");
+
+    	$(".portlet-header").click(function() {
+    		$(this).parents(".portlet:first").find(".portlet-content").toggle();
+    	});
+
+    	$(".column").disableSelection();
+
+        function init_2(){
+            $('.base tr').hover(
+                function(){
+                    $(this).addClass('hover');
+                },
+                function(){
+                    $(this).removeClass('hover');
+                }
+            );
+
+        	$('.pokazuj_wiecej').click(function(){
+        	    $(this).parent().parent().parent().find('tr.hidden').show();
+        	    $(this).parent().find('.pokazuj_mniej').show();
+        	    $(this).hide();
+        	    return false;
+        	});
+        	$('.pokazuj_mniej').click(function(){
+        	    $(this).parent().parent().parent().find('tr.hidden').hide();
+        	    $(this).parent().find('.pokazuj_wiecej').show();
+        	    $(this).hide();
+        	    return false;
+        	});
+        }
+
+        $('.portlet-content').each(function(){
+            var url = $(this).attr('rel');
+            var container = $(this);
+            if(url){
+                container.block({ message: '<div id="preloader"></div>',
+                                  css: { border: 'none',
+                                         padding: '5px',
+                                         '-webkit-border-radius': '5px', 
+                                         '-moz-border-radius': '5px', 
+                                         top:  ($(window).height() - 30) /2 + 'px', 
+                                         left: ($(window).width() - 30) /2 + 'px', 
+                                         height: '30px',
+                                         width: '30px' },
+                                  overlayCSS: { backgroundColor: '#FFF' }
+                });
+                $.get(url,
+                      function(data){
+                          //alert(data);
+                          if(data.replace(/\s*/g, "") == ''){
+                              container.parent().slideUp(1000, function(){ container.parent().remove(); });
+                          }else{
+                              container.html(data).unblock();
+                              init_2();
+                          }
+                      }
+                );
+            }
+        });
+    });
+</script>
+
+<div class="demo">
+
+<?php if ($uzytkownik['typ'] == 'admin') { ?>
+	<div class="column">
+		<!--<?php if($uzytkownik['id'] == '5' || $uzytkownik['id'] == '6' || $uzytkownik['id'] == '124' || $uzytkownik['id'] == '125'){ ?>
+		
+			<div class="portlet">
+				<div class="portlet-header">Nieopłacone faktury</div>
+				<div class="portlet-content" rel="<?php echo url::page('witaj/nieoplacone_faktury');?>"></div>
+			</div>
+			
+			<div class="portlet">
+				<div class="portlet-header">Faktury oczekujące na zapłatę</div>
+				<div class="portlet-content" rel="<?php echo url::page('witaj/faktury_oczekujace_na_zaplate');?>"></div>
+			</div>
+
+			<div class="portlet">
+				<div class="portlet-header">Klienci oczekujący na wystawienie faktury za pozycjonowanie</div>
+				<div class="portlet-content" rel="<?php echo url::page('witaj/faktury_za_pozycjonowanie_do_wystawienia');?>"></div>
+			</div>
+
+			<div class="portlet">
+				<div class="portlet-header">Klienci nierozliczani za pozycjonowanie</div>
+				<div class="portlet-content" rel="<?php echo url::page('witaj/klienci_nierozliczani_za_pozycjonowanie');?>"></div>
+			</div>
+
+			<div class="portlet">
+				<div class="portlet-header">Klienci wymagający sprawdzenia wyników</div>
+				<div class="portlet-content" rel="<?php echo url::page('witaj/klienci_wymagajacy_sprawdzenia_wynikow');?>"></div>
+			</div>
+	
+			<div class="portlet">
+				<div class="portlet-header">Globalny komunikat dla klientów</div>
+				<div class="portlet-content" rel="<?php echo url::page('witaj/globalny_komunikat_dla_klientow');?>"></div>
+			</div>
+	<?php } ?>-->
+	<?php if($uzytkownik['id'] == '126'){ ?>
+		<div class="portlet">
+			<div class="portlet-header gradient_poz_BK_RED">Nowi Klienci - Audyt</div>
+			<div class="portlet-content" rel="<?php echo url::page('witaj/nowi_na_audyt');?>"></div>
+		</div>
+	<?php } ?>
+	<?php if($uzytkownik['id'] == '1' || $uzytkownik['id'] == '4' || $uzytkownik['id'] == '6' || $uzytkownik['id'] == '126'){ ?>
+		
+			<div class="portlet">
+				<div class="portlet-header gradient_poz_BK_RED">Klienci bez OPT, ale z DST</div>
+				<div class="portlet-content" rel="<?php echo url::page('witaj/klienci_do_zoptymalizowania');?>"></div>
+			</div>
+			<div class="portlet">
+				<div class="portlet-header gradient_poz_BK_RED">Klienci do poprawienia / z problemami</div>
+				<div class="portlet-content" rel="<?php echo url::page('witaj/klienci_do_poprawienia');?>"></div>
+			</div>
+			<div class="portlet">
+				<div class="portlet-header gradient_dbl_RED_BK_RED">Klienci bez dostępów</div>
+				<div class="portlet-content" rel="<?php echo url::page('witaj/klienci_bez_dostepow');?>"></div>
+			</div>
+			
+		
+<?php } ?>
+|</div>
+	<div class="column">
+
+		<div class="portlet">
+			<div class="portlet-header gradient_rad_BK_GRN">WZROSTY</div>
+			<div class="portlet-content" rel="<?php echo url::page('witaj/top_wzrostow');?>"></div>
+		</div>
+		
+		<div class="portlet">
+			<div class="portlet-header gradient_rad_BK_RED">SPADKI</div>
+			<div class="portlet-content" rel="<?php echo url::page('witaj/top_spadkow');?>"></div>
+		</div>
+		
+<!--	<?php if ($uzytkownik['id'] == '5' || $uzytkownik['id'] == '6' || $uzytkownik['id'] == '125'){ ?>
+		<div class="portlet">
+			<div class="portlet-header">Finansowy raport miesięczny (kwoty brutto)</div>
+			<div class="portlet-content" rel="<?php echo url::page('witaj/finansowy_raport_miesieczny');?>"></div>
+		</div>
+
+		<div class="portlet">
+			<div class="portlet-header">Wpłaty dokonane w miesiącu (kwoty brutto)</div>
+			<div class="portlet-content" rel="<?php echo url::page('witaj/raport_z_miesiecznych_wplat');?>"></div>
+		</div> 
+
+		<div class="portlet">
+			<div class="portlet-header">Ostatnie wpłaty (kwoty brutto)</div>
+			<div class="portlet-content" rel="<?php echo url::page('witaj/ostatnie_wplaty');?>"></div>
+		</div>
+
+		<div class="portlet">
+			<div class="portlet-header">Najlepsi partnerzy</div>
+			<div class="portlet-content" rel="<?php echo url::page('witaj/najlepsi_partnerzy');?>"></div>
+		</div>
+
+		<div class="portlet">
+			<div class="portlet-header">Bieżąca aktywność partnerów</div>
+			<div class="portlet-content" rel="<?php echo url::page('witaj/biezaca_aktywnosc_partnerow');?>"></div>
+		</div>
+		<?php } ?> -->
+	</div>
+</div>
+<?php } // end if admin ?>
+
+
+
+<?php } // end if(!ACTION) ?>
+
+<?php if(ACTION == 'nieoplacone_faktury'){ ?>
+    <?php if($nieoplacone_faktury){ ?>
+    <table border="0" cellpadding="0" cellspacing="0" class="base">
+        <tr>
+            <th>Numer</th>
+            <th>Klient</th>
+            <th>Brutto</th>
+            <th>Termin</th>
+            <th>Przekroczenie</th>
+        </tr>
+        <?php $i = 0; $i_2 = 0; foreach($nieoplacone_faktury as $faktura){ ?>
+        <tr class="<?php if($i_2 > 2){ ?>hidden <?php } ?><?php if(!$i){ ?>odd<?php } $i++; if($i == 2){ $i = 0; } ?>">
+            <td><a href="<?php echo url::page('faktury/podglad/'.$faktura['id_faktury'].'/'.$faktura['id_klienta']);?>"><?php echo texts::numer_faktury($faktura);?></a></td>
+            <td><a href="<?php echo url::page('klienci/profil/'.$faktura['id_klienta']);?>"><?php echo $faktura['nazwa'];?></a></td>
+            <td><?php echo $faktura['kwota_brutto'];?></td>
+            <td><?php echo $faktura['termin_zaplaty'];?></td>
+            <td><?php echo texts::ile_dni_minelo($faktura['termin_zaplaty'], date("Y-m-d"));?></td>
+        </tr>
+        <?php $i_2++; } ?>
+        <?php if($i_2 > 3){ ?>
+        <tr>
+            <td class="right" colspan="10">
+                <a href="#" class="pokazuj_wiecej">pełna lista (<?php echo ($i_2 - 3);?> więcej)</a>
+                <a href="#" class="pokazuj_mniej hidden">skrócona lista</a>
+            </td>
+        </tr>
+        <?php } ?>
+    </table>
+    <?php } ?>
+<?php } ?>
+
+<?php if(ACTION == 'faktury_oczekujace_na_zaplate'){ ?>
+    <?php if($faktury_oczekujace_na_zaplate){ ?>
+    <table border="0" cellpadding="0" cellspacing="0" class="base">
+        <tr>
+            <th>Numer</th>
+            <th>Klient</th>
+            <th>Brutto</th>
+            <th>Termin</th>
+            <th>Pozostało</th>
+        </tr>
+        <?php $i = 0; $i_2 = 0; foreach($faktury_oczekujace_na_zaplate as $faktura){ ?>
+        <tr class="<?php if($i_2 > 2){ ?>hidden <?php } ?><?php if(!$i){ ?>odd<?php } $i++; if($i == 2){ $i = 0; } ?>">
+            <td><a href="<?php echo url::page('faktury/podglad/'.$faktura['id_faktury'].'/'.$faktura['id_klienta']);?>"><?php echo texts::numer_faktury($faktura);?></a></td>
+            <td><a href="<?php echo url::page('klienci/profil/'.$faktura['id_klienta']);?>"><?php echo $faktura['nazwa'];?></a></td>
+            <td><?php echo $faktura['kwota_brutto'];?></td>
+            <td><?php echo $faktura['termin_zaplaty'];?></td>
+            <td><?php echo texts::ile_dni_minelo($faktura['termin_zaplaty'], date("Y-m-d"));?></td>
+        </tr>
+        <?php $i_2++; } ?>
+        <?php if($i_2 > 3){ ?>
+        <tr>
+            <td class="right" colspan="10">
+                <a href="#" class="pokazuj_wiecej">pełna lista (<?php echo ($i_2 - 3);?> więcej)</a>
+                <a href="#" class="pokazuj_mniej hidden">skrócona lista</a>
+            </td>
+        </tr>
+        <?php } ?>
+    </table>
+    <?php } ?>
+<?php } ?>
+
+<?php if(ACTION == 'finansowy_raport_miesieczny'){ ?>
+    <?php if($finansowy_raport_miesieczny){ ?>
+    <table border="0" cellpadding="0" cellspacing="0" class="base">
+        <tr>
+            <th>Miesiąc</th>
+            <th>Wystawione</th>
+            <th>Opłacone</th>
+            <th>Nieopłacone</th>
+            <th>% kwoty</th>
+            <th>% faktur</th>
+        </tr>
+        <?php $i = 0; $i_2 = 0; foreach($finansowy_raport_miesieczny as $w){ if(!empty($w['kwota_wystawionych'])){ ?>
+        <tr class="<?php if($i_2 > 2){ ?>hidden <?php } ?><?php if(!$i){ ?>odd<?php } $i++; if($i == 2){ $i = 0; } ?>">
+            <td><?php echo $w['miesiac'];?></td>
+            <td><?php echo $w['kwota_wystawionych'];?> zł (<?php echo $w['ilosc_wystawionych'];?>)</td>
+            <td><?php echo $w['kwota_oplaconych'];?> zł (<?php echo $w['ilosc_oplaconych'];?>)</td>
+            <td><?php echo $w['kwota_nieoplaconych'];?> zł (<?php echo $w['ilosc_nieoplaconych'];?>)</td>
+            <td><?php echo round(($w['kwota_oplaconych'] / $w['kwota_wystawionych']) * 100, 2);?>%</td>
+            <td><?php echo round(($w['ilosc_oplaconych'] / $w['ilosc_wystawionych']) * 100, 2);?>%</td>
+        </tr>
+        <?php $i_2++; } } ?>
+        <?php if($i_2 > 3){ ?>
+        <tr>
+            <td class="right" colspan="10">
+                <a href="#" class="pokazuj_wiecej">pełna lista (<?php echo ($i_2 - 3);?> więcej)</a>
+                <a href="#" class="pokazuj_mniej hidden">skrócona lista</a>
+            </td>
+        </tr>
+        <?php } ?>
+    </table>
+    <?php } ?>
+<?php } ?>
+
+<?php if(ACTION == 'raport_z_miesiecznych_wplat'){ ?>
+    <?php if($raport_z_miesiecznych_wplat){ ?>
+    <table border="0" cellpadding="0" cellspacing="0" class="base">
+        <tr>
+            <th>Miesiąc</th>
+            <th>Suma wpłat</th>
+        </tr>
+        <?php $i = 0; $i_2 = 0; foreach($raport_z_miesiecznych_wplat as $w){ if(!empty($w['wplaty_brutto'])){ ?>
+        <tr class="<?php if($i_2 > 2){ ?>hidden <?php } ?><?php if(!$i){ ?>odd<?php } $i++; if($i == 2){ $i = 0; } ?>">
+            <td><?php echo $w['miesiac'];?></td>
+            <td><?php echo $w['wplaty_brutto'];?> zł</td>
+        </tr>
+        <?php $i_2++; } } ?>
+        <?php if($i_2 > 3){ ?>
+        <tr>
+            <td class="right" colspan="10">
+                <a href="#" class="pokazuj_wiecej">pełna lista (<?php echo ($i_2 - 3);?> więcej)</a>
+                <a href="#" class="pokazuj_mniej hidden">skrócona lista</a>
+            </td>
+        </tr>
+        <?php } ?>
+    </table>
+    <?php } ?>
+<?php } ?>
+
+<?php if(ACTION == 'ostatnie_wplaty'){ ?>
+    <?php if($ostatnie_wplaty){ ?>
+    <table border="0" cellpadding="0" cellspacing="0" class="base">
+        <tr>
+            <th>Data</th>
+            <th>Płatnik</th>
+            <th>Kwota</th>
+        </tr>
+        <?php $i = 0; $i_2 = 0; foreach($ostatnie_wplaty as $w){ ?>
+        <tr class="<?php if($i_2 > 2){ ?>hidden <?php } ?><?php if(!$i){ ?>odd<?php } $i++; if($i == 2){ $i = 0; } ?>">
+            <td style="white-space: nowrap;"><?php echo $w['data_zaplaty'];?></td>
+            <td><?php echo $w['nabywca_nazwa'];?></td>
+            <td style="white-space: nowrap;"><?php echo $w['kwota_brutto'];?> zł</td>
+        </tr>
+        <?php $i_2++; } ?>
+        <?php if($i_2 > 3){ ?>
+        <tr>
+            <td class="right" colspan="10">
+                <a href="#" class="pokazuj_wiecej">pełna lista (<?php echo ($i_2 - 3);?> więcej)</a>
+                <a href="#" class="pokazuj_mniej hidden">skrócona lista</a>
+            </td>
+        </tr>
+        <?php } ?>
+    </table>
+    <?php } ?>
+<?php } ?>
+
+<?php if(ACTION == 'najlepsi_partnerzy'){ ?>
+    <?php if($najlepsi_partnerzy){ ?>
+    <style type="text/css">
+        .pasek_struktury{
+            background: #000 url('<?php echo url::base();?>inc/cms/img/buttonBackground.png') center repeat-x;
+            float: left;
+            height: 10px;
+        }
+        #pasek_struktury_tip{
+            background: #FFF;
+            border: 1px solid #333;
+            float: left;
+            margin: 30px 0 0 0;
+            padding: 3px 5px 4px 5px;
+            position: absolute;
+        }
+    </style>
+
+    <script type="text/javascript">
+        $(function(){
+            $('.pasek_struktury').hover(
+                function(){
+                    $(this).after('<div id="pasek_struktury_tip">' + $(this).attr('rel') + '</div>');
+                    //$('#pasek_struktury_tip');
+                },
+                function(){
+                    $('#pasek_struktury_tip').remove();
+                }
+            );
+        });
+    </script>
+
+    <table border="0" cellpadding="0" cellspacing="0" class="base">
+        <tr>
+            <th>Nazwa</th>
+            <th>Saldo</th>
+            <th>Klienci</th>
+            <th>Struktura etapów</th>
+        </tr>
+        <?php $i = 0; $i_2 = 0; foreach($najlepsi_partnerzy as $w){ ?>
+        <tr class="<?php if($i_2 > 2){ ?>hidden <?php } ?><?php if(!$i){ ?>odd<?php } $i++; if($i == 2){ $i = 0; } ?>">
+            <td><?php echo $w['nazwa'];?></td>
+            <td><?php echo $w['saldo'];?></td>
+            <td><?php echo $w['ilosc_klientow_etap_5'];?> (<?php echo $w['ilosc_klientow'];?>)</td>
+            <td>
+                <?php
+                    $etapy = $this -> load -> model('klienci') -> etapy();
+                    $wszyscy = $w['ilosc_klientow_etap_1'] + $w['ilosc_klientow_etap_2'] + $w['ilosc_klientow_etap_3'] + $w['ilosc_klientow_etap_4'] + $w['ilosc_klientow_etap_5'] + $w['ilosc_klientow_etap_6'];
+                    $e1 = $wszyscy ? ($w['ilosc_klientow_etap_1'] / $wszyscy * 100) : 0;
+                    $e2 = $wszyscy ? ($w['ilosc_klientow_etap_2'] / $wszyscy * 100) : 0;
+                    $e3 = $wszyscy ? ($w['ilosc_klientow_etap_3'] / $wszyscy * 100) : 0;
+                    $e4 = $wszyscy ? ($w['ilosc_klientow_etap_4'] / $wszyscy * 100) : 0;
+                    $e5 = $wszyscy ? ($w['ilosc_klientow_etap_5'] / $wszyscy * 100) : 0;
+                    $e6 = $wszyscy ? ($w['ilosc_klientow_etap_6'] / $wszyscy * 100) : 0;
+                ?>
+                <?php if($e1){ ?><div class="pasek_struktury" style="background-color: #AAA; width: <?php echo $e1*2;?>px;" rel="<?php echo $etapy[1];?> (<?php echo $w['ilosc_klientow_etap_1'];?>)"></div><?php } ?>
+                <?php if($e2){ ?><div class="pasek_struktury" style="background-color: #999; width: <?php echo $e2*2;?>px;" rel="<?php echo $etapy[2];?> (<?php echo $w['ilosc_klientow_etap_2'];?>)"></div><?php } ?>
+                <?php if($e3){ ?><div class="pasek_struktury" style="background-color: #777; width: <?php echo $e3*2;?>px;" rel="<?php echo $etapy[3];?> (<?php echo $w['ilosc_klientow_etap_3'];?>)"></div><?php } ?>
+                <?php if($e4){ ?><div class="pasek_struktury" style="background-color: #555; width: <?php echo $e4*2;?>px;" rel="<?php echo $etapy[4];?> (<?php echo $w['ilosc_klientow_etap_4'];?>)"></div><?php } ?>
+                <?php if($e5){ ?><div class="pasek_struktury" style="background-color: orange; width: <?php echo $e5*2;?>px;" rel="<?php echo $etapy[5];?> (<?php echo $w['ilosc_klientow_etap_5'];?>)"></div><?php } ?>
+                <?php if($e6){ ?><div class="pasek_struktury" style="background-color: red; width: <?php echo $e6*2;?>px;" rel="<?php echo $etapy[6];?> (<?php echo $w['ilosc_klientow_etap_6'];?>)"></div><?php } ?>
+            </td>
+        </tr>
+        <?php $i_2++; } ?>
+        <?php if($i_2 > 3){ ?>
+        <tr>
+            <td class="right" colspan="10">
+                <a href="#" class="pokazuj_wiecej">pełna lista (<?php echo ($i_2 - 3);?> więcej)</a>
+                <a href="#" class="pokazuj_mniej hidden">skrócona lista</a>
+            </td>
+        </tr>
+        <?php } ?>
+    </table>
+    <?php } ?>
+<?php } ?>
+
+<?php if(ACTION == 'top_spadkow'){ ?>
+    <?php if($top_spadkow){ ?>
+    <table border="0" cellpadding="0" cellspacing="0" class="base">
+        <tr>
+            <th>Klient</th>
+            <th>Linki</th>
+			<th>Liczba fraz na 1 stronie</th>
+            <th>Liczba fraz ogólnie</th>
+            <th>Zmiana</th>
+        </tr>
+        <?php $i = 0; $i_2 = 0; foreach($top_spadkow as $w){ ?>
+        <tr class="<?php if($i_2 > 2){ ?>hidden <?php } ?><?php if(!$i){ ?>odd<?php } $i++; if($i == 2){ $i = 0; } ?>">
+            <td><a href="<?php echo url::page('klienci/profil/'.$w['id_klienta']);?>"><?php echo $w['nazwa'];?></a></td>
+            <td>
+                <a href="<?php echo url::page('klient/wyniki/'.$w['hash']);?>" target="_blank">Statystyki</a>,
+                <a href="<?php echo url::page('frazy/pozycje/'.$w['id_klienta']);?>" target="_blank">Sprawdzanie</a>
+            </td>
+			<td><?php echo $w['ile_na_1_stronie'];?></td>
+            <td><?php echo $w['liczba_fraz'];?></td>
+            <td style="color: red;"><?php echo $w['odsetek_fraz_w_top_10_zmiana'];?>%</td>
+        </tr>
+        <?php $i_2++; } ?>
+        <?php if($i_2 > 3){ ?>
+        <tr>
+            <td class="right" colspan="10">
+                <a href="#" class="pokazuj_wiecej">pełna lista (<?php echo ($i_2 - 3);?> więcej)</a>
+                <a href="#" class="pokazuj_mniej hidden">skrócona lista</a>
+            </td>
+        </tr>
+        <?php } ?>
+    </table>
+    <?php } ?>
+<?php } ?>
+
+<?php if(ACTION == 'top_wzrostow'){ ?>
+    <?php if($top_wzrostow){ ?>
+    <table border="0" cellpadding="0" cellspacing="0" class="base">
+        <tr>
+            <th>Klient</th>
+            <th>Linki</th>
+			<th>Liczba fraz na 1 stronie</th>
+            <th>Liczba fraz ogólnie</th>
+            <th>Zmiana</th>
+        </tr>
+        <?php $i = 0; $i_2 = 0; foreach($top_wzrostow as $w){ ?>
+        <tr class="<?php if($i_2 > 2){ ?>hidden <?php } ?><?php if(!$i){ ?>odd<?php } $i++; if($i == 2){ $i = 0; } ?>">
+            <td><a href="<?php echo url::page('klienci/profil/'.$w['id_klienta']);?>"><?php echo $w['nazwa'];?></a></td>
+            <td>
+                <a href="<?php echo url::page('klient/wyniki/'.$w['hash']);?>" target="_blank">Statystyki</a>,
+                <a href="<?php echo url::page('frazy/pozycje/'.$w['id_klienta']);?>" target="_blank">Sprawdzanie</a>
+            </td>
+			<td><?php echo $w['ile_na_1_stronie'];?></td>
+            <td><?php echo $w['liczba_fraz'];?></td>
+            <td style="color: green;">+<?php echo $w['odsetek_fraz_w_top_10_zmiana'];?>%</td>
+        </tr>
+        <?php $i_2++; } ?>
+        <?php if($i_2 > 3){ ?>
+        <tr>
+            <td class="right" colspan="10">
+                <a href="#" class="pokazuj_wiecej">pełna lista (<?php echo ($i_2 - 3);?> więcej)</a>
+                <a href="#" class="pokazuj_mniej hidden">skrócona lista</a>
+            </td>
+        </tr>
+        <?php } ?>
+    </table>
+    <?php } ?>
+<?php } ?>
+
+<?php if(ACTION == 'klienci_wymagajacy_dzialania'){ ?>
+    <?php if($klienci_wymagajacy_dzialania){ ?>
+    <?php $etapy = $this -> load -> model('klienci') -> etapy(); ?>
+    <table border="0" cellpadding="0" cellspacing="0" class="base">
+        <tr>
+            <th>Klient</th>
+            <th>Czynność</th>
+            <th>Akcja</th>
+        </tr>
+        <?php $i = 0; $i_2 = 0; foreach($klienci_wymagajacy_dzialania as $w){ ?>
+        <tr class="<?php if($i_2 > 2){ ?>hidden <?php } ?><?php if(!$i){ ?>odd<?php } $i++; if($i == 2){ $i = 0; } ?>">
+            <td>
+                <a href="<?php echo url::page('klienci/profil/'.$w['id_klienta']);?>"><?php echo $w['nazwa'];?></a>
+            </td>
+            <?php if($w['powod_usuniecia']){ ?>
+            <td>
+                Oczekiwanie na usunięcie
+            </td>
+            <td>
+                <a href="<?php echo url::page('klienci/usun-klienta/'.$w['id_klienta']);?>">Przejdź do usuwania</a>
+            </td>
+            <?php }else{ ?>
+            <td>
+                <?php echo $etapy[$w['etap']];?>
+            </td>
+            <td>
+                <a href="<?php echo url::page('frazy/wszystkie/'.$w['id_klienta']);?>">Przejdź do fraz</a>
+            </td>
+            <?php } ?>
+        </tr>
+        <?php $i_2++; } ?>
+        <?php if($i_2 > 3){ ?>
+        <tr>
+            <td class="right" colspan="10">
+                <a href="#" class="pokazuj_wiecej">pełna lista (<?php echo ($i_2 - 3);?> więcej)</a>
+                <a href="#" class="pokazuj_mniej hidden">skrócona lista</a>
+            </td>
+        </tr>
+        <?php } ?>
+    </table>
+    <?php } ?>
+<?php } ?>
+
+<?php if(ACTION == 'faktury_za_pozycjonowanie_do_wystawienia'){ ?>
+    <?php if($faktury_za_pozycjonowanie_do_wystawienia){ ?>
+    <table border="0" cellpadding="0" cellspacing="0" class="base">
+        <tr>
+            <th>Klient</th>
+            <th>Akcja</th>
+        </tr>
+        <?php $i = 0; $i_2 = 0; foreach($faktury_za_pozycjonowanie_do_wystawienia as $w){ ?>
+        <tr class="<?php if($i_2 > 2){ ?>hidden <?php } ?><?php if(!$i){ ?>odd<?php } $i++; if($i == 2){ $i = 0; } ?>">
+            <td><a href="<?php echo url::page('klienci/profil/'.$w['id_klienta']);?>"><?php echo $w['nazwa'];?></a></td>
+            <td><a href="<?php echo url::page('faktury/klienta/'.$w['id_klienta']);?>">przejdź do faktur VAT</a></td>
+        </tr>
+        <?php $i_2++; } ?>
+        <?php if($i_2 > 3){ ?>
+        <tr>
+            <td class="right" colspan="10">
+                <a href="#" class="pokazuj_wiecej">pełna lista (<?php echo ($i_2 - 3);?> więcej)</a>
+                <a href="#" class="pokazuj_mniej hidden">skrócona lista</a>
+            </td>
+        </tr>
+        <?php } ?>
+    </table>
+    <?php } ?>
+<?php } ?>
+
+<?php if(ACTION == 'klienci_wymagajacy_sprawdzenia_wynikow'){ ?>
+    <?php if($klienci_wymagajacy_sprawdzenia_wynikow){ ?>
+    <table border="0" cellpadding="0" cellspacing="0" class="base">
+        <tr>
+            <th>Klient</th>
+            <th>Akcja</th>
+        </tr>
+        <?php $i = 0; $i_2 = 0; foreach($klienci_wymagajacy_sprawdzenia_wynikow as $w){ ?>
+        <tr class="<?php if($i_2 > 2){ ?>hidden <?php } ?><?php if(!$i){ ?>odd<?php } $i++; if($i == 2){ $i = 0; } ?>">
+            <td><?php echo $w['nazwa'];?></td>
+            <td><a href="<?php echo url::page('frazy/pozycje/'.$w['id_klienta']);?>" rel="external">Przejdź do sprawdzania</a></td>
+        </tr>
+        <?php $i_2++; } ?>
+        <?php if($i_2 > 3){ ?>
+        <tr>
+            <td class="right" colspan="10">
+                <a href="#" class="pokazuj_wiecej">pełna lista (<?php echo ($i_2 - 3);?> więcej)</a>
+                <a href="#" class="pokazuj_mniej hidden">skrócona lista</a>
+            </td>
+        </tr>
+        <?php } ?>
+    </table>
+    <?php } ?>
+<?php } ?>
+
+<?php if(ACTION == 'klienci_nierozliczani_za_pozycjonowanie'){ ?>
+    <?php if($klienci_nierozliczani_za_pozycjonowanie){ ?>
+    <table border="0" cellpadding="0" cellspacing="0" class="base">
+        <tr>
+            <th>Klient</th>
+            <th>Akcja</th>
+        </tr>
+        <?php $i = 0; $i_2 = 0; foreach($klienci_nierozliczani_za_pozycjonowanie as $w){ ?>
+        <tr class="<?php if($i_2 > 2){ ?>hidden <?php } ?><?php if(!$i){ ?>odd<?php } $i++; if($i == 2){ $i = 0; } ?>">
+            <td><?php echo $w['nazwa'];?></td>
+            <td><a href="<?php echo url::page('klienci/profil/'.$w['id_klienta']);?>">Przejdź do profilu klienta</a></td>
+        </tr>
+        <?php $i_2++; } ?>
+        <?php if($i_2 > 3){ ?>
+        <tr>
+            <td class="right" colspan="10">
+                <a href="#" class="pokazuj_wiecej">pełna lista (<?php echo ($i_2 - 3);?> więcej)</a>
+                <a href="#" class="pokazuj_mniej hidden">skrócona lista</a>
+            </td>
+        </tr>
+        <?php } ?>
+    </table>
+    <?php } ?>
+<?php } ?>
+
+<?php if(ACTION == 'biezaca_aktywnosc_partnerow'){ ?>
+    <?php if($biezaca_aktywnosc_partnerow){ ?>
+    <table border="0" cellpadding="0" cellspacing="0" class="base">
+        <tr>
+            <th>Partner</th>
+            <th>Data ostatniej aktywności</th>
+        </tr>
+        <?php $i = 0; $i_2 = 0; foreach($biezaca_aktywnosc_partnerow as $w){ ?>
+        <tr class="<?php if($i_2 > 2){ ?>hidden <?php } ?><?php if(!$i){ ?>odd<?php } $i++; if($i == 2){ $i = 0; } ?>">
+            <td><?php echo $w['nazwa'];?></td>
+            <td>
+                <?php if($w['data_ostatniej_aktywnosci'] != '0000-00-00 00:00:00'){ ?>
+                <?php
+                    $data = explode(' ', $w['data_ostatniej_aktywnosci']);
+                    $odleglosc = texts::ile_dni_minelo($data[0], date("Y-m-d"));
+                    if($odleglosc == '0 dni') echo 'Dzisiaj o '.substr($data[1], 0, -3);
+                    else if($odleglosc == '1 dzień') echo 'Wczoraj o '.substr($data[1], 0, -3);
+                    else if($odleglosc == '2 dni') echo 'Przedwczoraj o '.substr($data[1], 0, -3);
+                    else echo texts::nice_date($data[0]).' o '.substr($data[1], 0, -3);
+                ?>
+                <?php }else{ ?>
+                    Brak danych
+                <?php } ?>
+            </td>
+        </tr>
+        <?php $i_2++; } ?>
+        <?php if($i_2 > 3){ ?>
+        <tr>
+            <td class="right" colspan="10">
+                <a href="#" class="pokazuj_wiecej">pełna lista (<?php echo ($i_2 - 3);?> więcej)</a>
+                <a href="#" class="pokazuj_mniej hidden">skrócona lista</a>
+            </td>
+        </tr>
+        <?php } ?>
+    </table>
+    <?php } ?>
+<?php } ?>
+
+<?php if(ACTION == 'ostatnie_zmiany'){ ?>
+    <?php if($ostatnie_zmiany){ ?>
+    <table border="0" cellpadding="0" cellspacing="0" class="base">
+        <tr>
+            <th>Data</th>
+            <th>Zmiana</th>
+        </tr>
+        <?php $i = 0; $i_2 = 0; foreach($ostatnie_zmiany as $w){ ?>
+        <tr class="<?php if($i_2 > 2){ ?>hidden <?php } ?><?php if(!$i){ ?>odd<?php } $i++; if($i == 2){ $i = 0; } ?>">
+            <td style="white-space: nowrap;"><?php echo texts::nice_date($w['data']);?></td>
+            <td><?php echo $w['zmiana'];?></td>
+        </tr>
+        <?php $i_2++; } ?>
+        <?php if($i_2 > 3){ ?>
+        <tr>
+            <td class="right" colspan="10">
+                <a href="#" class="pokazuj_wiecej">pełna lista (<?php echo ($i_2 - 3);?> więcej)</a>
+                <a href="#" class="pokazuj_mniej hidden">skrócona lista</a>
+            </td>
+        </tr>
+        <?php } ?>
+    </table>
+    <?php } ?>
+<?php } ?>
+
+<?php if(ACTION == 'globalny_komunikat_dla_klientow'){
+    forms::open(array('action' => url::page(CONTROLLER.'/zapisz-globalny-komunikat-dla-klientow')));
+
+    forms::textarea(array('name' => 'komunikat',
+                          'value' => $globalny_komunikat_dla_klientow));
+
+    forms::submit(array('label' => 'Zapisz komunikat'));
+
+    forms::close(0);
+} ?>
+
+<?php if(ACTION == 'nowi_na_audyt'){ ?>
+    <?php if($nowi_na_audyt){ ?>
+    <table border="0" cellpadding="0" cellspacing="0" class="base">
+        <tr>
+            <th>Klient</th>
+            <th>Notatka</th>
+			<th>Data dodania Klienta</th>
+        </tr>
+        <?php $i = 0; $i_2 = 0; foreach($nowi_na_audyt as $w){ ?>
+        <tr class="<?php if($i_2 > 2){ ?>hidden <?php } ?><?php if(!$i){ ?>odd<?php } $i++; if($i == 2){ $i = 0; } ?>">
+            <td>
+                <a href="<?php echo url::page('klienci/profil/'.$w['id_klienta']);?>"><?php echo $w['nazwa'];?></a>
+            </td>
+            <td>
+                <?php echo $w['notatka_do_nastepnego_kontaktu'];?>
+            </td>
+			<td>
+                <?php echo $w['data_utworzenia'];?>
+            </td>
+        </tr>
+        <?php $i_2++; } ?>
+        <?php if($i_2 > 3){ ?>
+        <tr>
+            <td class="right" colspan="10">
+                <a href="#" class="pokazuj_wiecej">pełna lista (<?php echo ($i_2 - 3);?> więcej)</a>
+                <a href="#" class="pokazuj_mniej hidden">skrócona lista</a>
+            </td>
+        </tr>
+        <?php } ?>
+    </table>
+    <?php } ?>
+<?php } ?>
+
+<?php if(ACTION == 'klienci_do_zoptymalizowania'){ ?>
+    <?php if($klienci_do_zoptymalizowania){ ?>
+    <table border="0" cellpadding="0" cellspacing="0" class="base">
+        <tr>
+            <th>Klient</th>
+            <th>Zakładka</th>
+			<th>Umowa od</th>
+        </tr>
+        <?php $i = 0; $i_2 = 0; foreach($klienci_do_zoptymalizowania as $w){ ?>
+        <tr class="<?php if($i_2 > 2){ ?>hidden <?php } ?><?php if(!$i){ ?>odd<?php } $i++; if($i == 2){ $i = 0; } ?>">
+            <td>
+                <a href="<?php echo url::page('klienci/profil/'.$w['id_klienta']);?>"><?php echo $w['nazwa'];?></a>
+            </td>
+            <td>
+                <a href="<?php echo url::page('seo/seo_view/'.$w['id_klienta']);?>">SEO</a>/<a href="<?php echo url::page('frazy/wszystkie/'.$w['id_klienta']);?>">FRAZY</a>/<a href="<?php echo url::page('klient/wyniki/'.$w['hash']);?>" target="_blank">Statystyki</a>
+            </td>
+			<td>
+                <?php echo $w['umowa_czas_okreslony_od'];?>
+            </td>
+        </tr>
+        <?php $i_2++; } ?>
+        <?php if($i_2 > 3){ ?>
+        <tr>
+            <td class="right" colspan="10">
+                <a href="#" class="pokazuj_wiecej">pełna lista (<?php echo ($i_2 - 3);?> więcej)</a>
+                <a href="#" class="pokazuj_mniej hidden">skrócona lista</a>
+            </td>
+        </tr>
+        <?php } ?>
+    </table>
+    <?php } ?>
+<?php } ?>
+
+<?php if(ACTION == 'klienci_do_poprawienia'){ ?>
+    <?php if($klienci_do_poprawienia){ ?>
+    <table border="0" cellpadding="0" cellspacing="0" class="base">
+        <tr>
+            <th>Klient</th>
+            <th>Zakładka</th>
+			<th>Umowa od</th>
+        </tr>
+        <?php $i = 0; $i_2 = 0; foreach($klienci_do_poprawienia as $w){ ?>
+        <tr class="<?php if($i_2 > 2){ ?>hidden <?php } ?><?php if(!$i){ ?>odd<?php } $i++; if($i == 2){ $i = 0; } ?>">
+            <td>
+                <a href="<?php echo url::page('klienci/profil/'.$w['id_klienta']);?>"><?php echo $w['nazwa'];?></a>
+            </td>
+            <td>
+                <a href="<?php echo url::page('seo/seo_view/'.$w['id_klienta']);?>">SEO</a>/<a href="<?php echo url::page('frazy/wszystkie/'.$w['id_klienta']);?>">FRAZY</a>/<a href="<?php echo url::page('klient/wyniki/'.$w['hash']);?>" target="_blank">Statystyki</a>
+            </td>
+			
+			<td>
+                <?php echo $w['umowa_czas_okreslony_od'];?>
+            </td>
+        </tr>
+        <?php $i_2++; } ?>
+        <?php if($i_2 > 3){ ?>
+        <tr>
+            <td class="right" colspan="10">
+                <a href="#" class="pokazuj_wiecej">pełna lista (<?php echo ($i_2 - 3);?> więcej)</a>
+                <a href="#" class="pokazuj_mniej hidden">skrócona lista</a>
+            </td>
+        </tr>
+        <?php } ?>
+    </table>
+    <?php } ?>
+<?php } ?>
+
+<?php if(ACTION == 'klienci_bez_dostepow'){ ?>
+    <?php if($klienci_bez_dostepow){ ?>
+    <table border="0" cellpadding="0" cellspacing="0" class="base">
+        <tr>
+            <th>Klient</th>
+            <th>Zakładka</th>
+			<th>Umowa od</th>
+        </tr>
+        <?php $i = 0; $i_2 = 0; foreach($klienci_bez_dostepow as $w){ ?>
+        <tr class="<?php if($i_2 > 2){ ?>hidden <?php } ?><?php if(!$i){ ?>odd<?php } $i++; if($i == 2){ $i = 0; } ?>">
+            <td>
+                <a href="<?php echo url::page('klienci/profil/'.$w['id_klienta']);?>"><?php echo $w['nazwa'];?></a>
+            </td>
+            <td>
+                <a href="<?php echo url::page('seo/seo_view/'.$w['id_klienta']);?>">SEO</a>/<a href="<?php echo url::page('frazy/wszystkie/'.$w['id_klienta']);?>">FRAZY</a>/<a href="<?php echo url::page('klient/wyniki/'.$w['hash']);?>" target="_blank">Statystyki</a>
+            </td>
+			
+			<td>
+                <?php echo $w['umowa_czas_okreslony_od'];?>
+            </td>
+        </tr>
+        <?php $i_2++; } ?>
+        <?php if($i_2 > 3){ ?>
+        <tr>
+            <td class="right" colspan="10">
+                <a href="#" class="pokazuj_wiecej">pełna lista (<?php echo ($i_2 - 3);?> więcej)</a>
+                <a href="#" class="pokazuj_mniej hidden">skrócona lista</a>
+            </td>
+        </tr>
+        <?php } ?>
+    </table>
+    <?php } ?>
+<?php } ?>
+
+<?php
+    }else{
+        forms::title(array('title' => 'Witaj w CRM'));
+		forms::button(array('value' => 'Dodaj nowego klienta',
+                            'link' => url::page('klienci/form/0')));
+		
+		}
+
+    if(!ACTION) $this -> load -> view('footer');
+?>

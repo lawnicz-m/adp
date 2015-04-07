@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="windows-1252"?>
+	<SITES VERSION="1.2">
+	<SITE NAME="notariusz-boc.eu">
+	<PROTOCOL>FTP</PROTOCOL>
+    <ADDRESS>notariusz-boc.eu</ADDRESS>
+    <PORT>21</PORT>
+    <USERNAME>ftp_produkcja@notariusz-boc.eu</USERNAME>
+    <PASSWORD>&MX6sS.29r44</PASSWORD>
+    <PASSIVE>DEFAULT</PASSIVE>
+    <SSL>NONE</SSL>
+	</SITE>
+	</SITES>

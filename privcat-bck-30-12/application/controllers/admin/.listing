@@ -1,0 +1,9 @@
+total 32
+-rwxr-xr-x 1 nobody nogroup  98 Sep 16 15:00 AdminClientController.php
+-rwxr-xr-x 1 nobody nogroup  98 Sep 16 15:00 AdminPhraseController.php
+-rwxr-xr-x 1 nobody nogroup  93 Sep 16 15:00 AdminPrivcatController.php
+-rwxr-xr-x 1 nobody nogroup 109 Sep 16 15:00 AdminPrivcatcategoryController.php
+-rwxr-xr-x 1 nobody nogroup 103 Sep 16 15:00 AdminPrivcatentryController.php
+-rwxr-xr-x 1 nobody nogroup 107 Sep 16 15:00 AdminPrivcathistoryController.php
+-rwxr-xr-x 1 nobody nogroup  87 Sep 16 15:00 AdminTextController.php
+-rwxr-xr-x 1 nobody nogroup 102 Sep 16 15:00 AdminUserController.php

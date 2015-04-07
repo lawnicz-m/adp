@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="windows-1252"?>
+	<SITES VERSION="1.2">
+	<SITE NAME="filipsc.pl">
+	<PROTOCOL>FTP</PROTOCOL>
+    <ADDRESS>filipsc.pl</ADDRESS>
+    <PORT>21</PORT>
+    <USERNAME>filipsc</USERNAME>
+    <PASSWORD>TUWzFJ@W3mgi</PASSWORD>
+    <PASSIVE>DEFAULT</PASSIVE>
+    <SSL>NONE</SSL>
+	</SITE>
+	</SITES>

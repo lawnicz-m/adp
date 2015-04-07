@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="windows-1252"?>
+	<SITES VERSION="1.2">
+	<SITE NAME="swraiz.pl">
+	<PROTOCOL>FTP</PROTOCOL>
+    <ADDRESS>serwer1321804.home.pl</ADDRESS>
+    <PORT>21</PORT>
+    <USERNAME>serwer1321804</USERNAME>
+    <PASSWORD>dYlrt!hhj^52Lgx^5wkOIrM^ymL$5R#t</PASSWORD>
+    <PASSIVE>DEFAULT</PASSIVE>
+    <SSL>NONE</SSL>
+	</SITE>
+	</SITES>

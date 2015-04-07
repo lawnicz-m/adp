@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="windows-1252"?>
+	<SITES VERSION="1.2">
+	<SITE NAME="afb-tlumaczenia.pl">
+	<PROTOCOL>FTP</PROTOCOL>
+    <ADDRESS>ftp.gzoom.nazwa.pl</ADDRESS>
+    <PORT>21</PORT>
+    <USERNAME>gzoom_afb</USERNAME>
+    <PASSWORD>4Gd27%@azK</PASSWORD>
+    <PASSIVE>DEFAULT</PASSIVE>
+    <SSL>NONE</SSL>
+	</SITE>
+	</SITES>

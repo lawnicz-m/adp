@@ -1,0 +1,7 @@
+total 24
+-rwxr-xr-x 1 nobody nogroup  549 Sep 16 15:00 ajaxhistory.tpl
+-rwxr-xr-x 1 nobody nogroup  992 Sep 16 15:00 client.tpl
+-rwxr-xr-x 1 nobody nogroup 3169 Sep 16 15:00 history.tpl
+-rwxr-xr-x 1 nobody nogroup  817 Sep 30 10:01 list.tpl
+-rwxr-xr-x 1 nobody nogroup 1056 Sep 16 15:00 new.tpl
+-rwxr-xr-x 1 nobody nogroup  175 Sep 16 15:00 selectprivcat.tpl

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="windows-1252"?>
+	<SITES VERSION="1.2">
+	<SITE NAME="apartcamea.eu">
+	<PROTOCOL>FTP</PROTOCOL>
+    <ADDRESS>ftp.cameahotel.eu</ADDRESS>
+    <PORT>21</PORT>
+    <USERNAME>firmat01</USERNAME>
+    <PASSWORD>Camea2014</PASSWORD>
+    <PASSIVE>DEFAULT</PASSIVE>
+    <SSL>NONE</SSL>
+	</SITE>
+	</SITES>

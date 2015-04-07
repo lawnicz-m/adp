@@ -1,0 +1,4 @@
+total 12
+-rwxr-xr-x 1 nobody nogroup 119 Sep 16 15:00 access_restricted.tpl
+-rwxr-xr-x 1 nobody nogroup 786 Sep 16 15:00 internal_error.tpl
+-rwxr-xr-x 1 nobody nogroup 115 Sep 16 15:00 not_found.tpl

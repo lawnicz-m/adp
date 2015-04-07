@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="windows-1252"?>
+	<SITES VERSION="1.2">
+	<SITE NAME="decorationnowak.pl">
+	<PROTOCOL>FTP</PROTOCOL>
+    <ADDRESS>ftp.afidor.nazwa.pl</ADDRESS>
+    <PORT>21</PORT>
+    <USERNAME>afidor_decoration</USERNAME>
+    <PASSWORD>7AM80op0gO_a</PASSWORD>
+    <PASSIVE>DEFAULT</PASSIVE>
+    <SSL>NONE</SSL>
+	</SITE>
+	</SITES>

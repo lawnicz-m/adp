@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="windows-1252"?>
+	<SITES VERSION="1.2">
+	<SITE NAME="twojafototapeta24.pl">
+	<PROTOCOL>FTP</PROTOCOL>
+    <ADDRESS>eurodruk.taniesklepyinternetowe.pl</ADDRESS>
+    <PORT>21</PORT>
+    <USERNAME>ftp@eurodruk.taniesklepyinternetowe.pl</USERNAME>
+    <PASSWORD>Rd3n6LVy</PASSWORD>
+    <PASSIVE>DEFAULT</PASSIVE>
+    <SSL>NONE</SSL>
+	</SITE>
+	</SITES>
