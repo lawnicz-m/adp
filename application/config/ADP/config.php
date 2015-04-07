@@ -21,7 +21,7 @@ define('BASE_MAIL', E_MAIL_ADDRESS);
 define('BASE_URL', APP_BASE_URL);
 
 // Does Application Use Mod_Rewrite URLs?
-define('MOD_REWRITE',TRUE);
+define('MOD_REWRITE',FALSE);
 
 // Turn Debugging On?
 define('DEBUG',FALSE);

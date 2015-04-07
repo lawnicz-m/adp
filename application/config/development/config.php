@@ -21,7 +21,7 @@ define('BASE_MAIL', 'anixa.pl@gmail.com');
 define('BASE_URL','http://localhost:8888/h/');
 
 // Does Application Use Mod_Rewrite URLs?
-define('MOD_REWRITE',TRUE);
+define('MOD_REWRITE',FALSE);
 
 // Turn Debugging On?
 define('DEBUG',TRUE);
