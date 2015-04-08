@@ -127,5 +127,10 @@
             Diagnostyka
         </a>
     </li>
+    <li>
+        <a class="main" href="<?php echo url::page('lawka');?>">
+            Frazy ogólne
+        </a>
+    </li>
 
 </ul>
